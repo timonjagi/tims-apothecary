@@ -35,7 +35,7 @@ const SearchOutline = React.forwardRef<HTMLInputElement, SearchOutlineProps>(
         </label>
         <input
           type="search"
-          placeholder="Search your medicine here"
+          placeholder="Search remedies and supplements"
           className={SearchOutlineInput}
           id={props.id || 'search-outline'}
           value={searchTerm}

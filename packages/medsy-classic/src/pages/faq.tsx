@@ -38,8 +38,11 @@ export default function FAQ() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <meta name="Description" content="Put your description here." />
-        <title>F.A.Q</title>
+        <meta
+          name="Description"
+          content="Frequently asked questions about Tim's Apothecary, orders, delivery, and product sourcing."
+        />
+        <title>FAQ — Tim's Apothecary</title>
       </Head>
 
       <div className="py-35px px-4 md:p-35px">

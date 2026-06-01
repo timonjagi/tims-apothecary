@@ -42,12 +42,12 @@ export default function HeroBlock() {
 
       <div className="flex flex-col relative z-10 justify-center items-center w-full max-w-720px">
         <h1 className="font-normal font-30px text-gray-900 text-center mb-4">
-          <span className="font-bold">Medsy</span> Provides You
-          <span className="font-bold block">Safe Delivery</span>
+          <span className="font-bold">Tim's Apothecary</span> Delivers
+          <span className="font-bold block">Trusted Remedies</span>
         </h1>
 
         <p className="font-17px text-gray-700 lg:mb-60px text-center leading-loose">
-          Get medicines at your home within 30 minutes.
+          Your go-to health remedies and supplements, sourced and shipped with care.
         </p>
         {!isSticky && <Search ref={searchRef} className="hidden lg:flex" />}
         <Waypoint

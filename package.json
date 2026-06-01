@@ -1,8 +1,9 @@
 {
-  "name": "medsy",
+  "name": "tims-apothecary",
   "version": "1.0.0",
   "private": true,
-  "author": "RedQ, Inc.",
+  "description": "Tim's Apothecary — drop-shipped health remedies and supplements, powered by a Google Sheet as the database.",
+  "author": "Tim",
   "workspaces": [
     "packages/*"
   ],

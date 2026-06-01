@@ -11,8 +11,11 @@ export default function FAQ() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <meta name="Description" content="Put your description here." />
-        <title>Terms &amp; Condition</title>
+        <meta
+          name="Description"
+          content="Terms of service for Tim's Apothecary — orders, privacy, and use of this site."
+        />
+        <title>Terms &amp; Conditions — Tim's Apothecary</title>
       </Head>
 
       <div className="px-0">

@@ -67,8 +67,8 @@ export default function Header() {
 
       <Link href="/">
         <a className="hidden mx-auto lg:mr-10 lg:flex">
-          <span className="sr-only">Medsy</span>
-          <Logo width="110px" id="medsy-header-logo" />
+          <span className="sr-only">Tim's Apothecary</span>
+          <Logo width="180px" id="tims-apothecary-header-logo" />
         </a>
       </Link>
 

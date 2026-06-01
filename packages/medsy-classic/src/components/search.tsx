@@ -26,7 +26,7 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>(
         </label>
         <input
           type="search"
-          placeholder="Search your medicine here"
+          placeholder="Search remedies and supplements"
           className={SearchInput}
           id={props.id || 'search-normal'}
           value={searchTerm}

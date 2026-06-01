@@ -1,6 +1,8 @@
 ## About
 
-This project includes Google Spreadsheet and serverless API routes. On visiting, the app calls get products method, which stores the product's info . On order, the app calls /api/order to place a order on google spreadsheet.
+**Tim's Apothecary** — a drop-ship storefront for go-to health remedies and supplements, built on the `medsy-classic` theme. Products live in a Google Sheet (one row per SKU), orders land in a second sheet via a serverless API route. No payment gateway, no backend — confirm orders with customers directly (WhatsApp, email, etc.) and ship from your supplier.
+
+On visiting, the app calls a `getProducts` method that reads the product sheet. On order, the app calls `/api/order` to write the order row to the orders sheet.
 
 ## Requirement:
 
