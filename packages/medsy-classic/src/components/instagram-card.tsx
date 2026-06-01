@@ -61,7 +61,9 @@ const InstagramPost: React.FC<InstagramPostProps> = ({ postUrl }) => {
         }
       });
 
-    return () => (mounted = false);
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   return (
