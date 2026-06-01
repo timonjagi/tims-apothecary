@@ -7,9 +7,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "resolutions": {
-    "gtoken": "^5.0.0"
-  },
   "scripts": {
     "clean": "yarn workspaces run rimraf \"{.next,dist,build,node_modules}\" && rimraf node_modules",
     "dev:medsy-modern": "yarn workspace @medsy/modern dev",

@@ -23,30 +23,17 @@ export async function getProducts() {
   const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id]
   // read rows
   const rows = await sheet.getRows(); // can pass in { limit, offset }
-  const products = rows?.map(
-    ({
-      id,
-      name,
-      image,
-      description,
-      price,
-      type,
-      quantity,
-      dosage,
-      substance,
-      manufacturer,
-    }) => ({
-      id,
-      name,
-      image,
-      description,
-      price,
-      type,
-      quantity,
-      dosage,
-      substance,
-      manufacturer,
-    })
-  );
+  const products = rows?.map((row) => ({
+    id: row.get('id'),
+    name: row.get('name'),
+    image: row.get('image'),
+    description: row.get('description'),
+    price: row.get('price'),
+    type: row.get('type'),
+    quantity: row.get('quantity'),
+    dosage: row.get('dosage'),
+    substance: row.get('substance'),
+    manufacturer: row.get('manufacturer'),
+  }));
   return products;
 }
