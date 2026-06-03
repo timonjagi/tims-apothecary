@@ -35,7 +35,7 @@ export default function HeroBlock() {
   return (
     <div className="w-full flex items-center justify-center bg-gray-f7 p-30px h-480px md:h-580px 2xxl:h-650px relative">
       <img
-        src={HeroBannerImg}
+        src={HeroBannerImg.src}
         alt="hero-image"
         className="w-full h-full hidden md:flex absolute top-0 left-0 object-cover"
       />
