@@ -12,8 +12,7 @@ async function createOrder(data) {
   }
 
   const { GoogleSpreadsheet } = require('google-spreadsheet');
-  const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_ORDER);
-  await doc.useServiceAccountAuth({
+  const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_ORDER, {
     client_email: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL,
     private_key: process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(
       /\\n/gm,
