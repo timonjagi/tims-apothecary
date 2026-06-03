@@ -4,6 +4,7 @@
   "private": true,
   "description": "Tim's Apothecary — drop-shipped health remedies and supplements, powered by a Google Sheet as the database.",
   "author": "Tim",
+  "packageManager": "yarn@1.22.19",
   "workspaces": [
     "packages/*"
   ],
