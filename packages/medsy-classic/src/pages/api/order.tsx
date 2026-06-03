@@ -12,13 +12,16 @@ async function createOrder(data) {
   }
 
   const { GoogleSpreadsheet } = require('google-spreadsheet');
-  const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_ORDER, {
-    client_email: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL,
-    private_key: process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(
+  const { JWT } = require('google-auth-library');
+  const serviceAccountAuth = new JWT({
+    email: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL,
+    key: process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(
       /\\n/gm,
       '\n'
     ),
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
   });
+  const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_ORDER, serviceAccountAuth);
   await doc.loadInfo(); // loads document properties and worksheets
   const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id]
 
