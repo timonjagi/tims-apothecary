@@ -44,6 +44,7 @@ function expandIcon({ isActive }) {
 }
 
 const Accordion: React.FC<AccordionProps> = ({ className, items = [] }) => (
+  // @ts-expect-error rc-collapse@2 types don't include children — runtime is fine
   <Collapse
     accordion={true}
     className={`accordion ${className}`.trim()}
