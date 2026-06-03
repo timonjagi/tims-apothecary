@@ -3,7 +3,7 @@ import SearchIcon from 'assets/icons/search-icon';
 import { useSearch } from 'contexts/search/use-search';
 import { SearchBase, SearchIconWrapper, SearchInput } from './utils/theme';
 
-type SearchProps = { className?: string; id?: string; [key: string]: unknown };
+type SearchProps = { className?: string; id?: string; [key: string]: any };
 
 const Search = React.forwardRef<HTMLInputElement, SearchProps>(
   ({ className = '', ...props }, ref) => {

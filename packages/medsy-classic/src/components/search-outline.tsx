@@ -10,7 +10,7 @@ import {
 type SearchOutlineProps = {
   className?: string;
   id?: string;
-  [key: string]: unknown;
+  [key: string]: any;
 };
 
 const SearchOutline = React.forwardRef<HTMLInputElement, SearchOutlineProps>(
