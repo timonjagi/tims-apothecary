@@ -12,10 +12,15 @@ export async function getProducts() {
   }
   const { GoogleSpreadsheet } = require('google-spreadsheet');
   const { JWT } = require('google-auth-library');
-  const privateKey = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(
-    /\\\\n|\\n/g,
-    '\n'
-  );
+  let privateKey = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
+  if (!privateKey.includes('\n')) {
+    const body = privateKey
+      .replace('-----BEGIN PRIVATE KEY-----', '')
+      .replace('-----END PRIVATE KEY-----', '')
+      .replace(/\\n/g, '')
+      .trim();
+    privateKey = `-----BEGIN PRIVATE KEY-----\n${body}\n-----END PRIVATE KEY-----\n`;
+  }
   const serviceAccountAuth = new JWT({
     email: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL,
     key: privateKey,
