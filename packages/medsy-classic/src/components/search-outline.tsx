@@ -28,7 +28,7 @@ const SearchOutline = React.forwardRef<HTMLInputElement, SearchOutlineProps>(
     return (
       <form noValidate role="search" className={classNames} onSubmit={onSubmit}>
         <span className={SearchOutlineIconWrapper}>
-          <SearchIcon color="#999999" />
+          <SearchIcon color="#5a5a5a" />
         </span>
         <label htmlFor={props.id || 'search-outline'} className="sr-only">
           {props.id || 'search-outline'}
