@@ -119,6 +119,18 @@ export const SearchIconWrapper =
 export const SearchInput =
   'w-full h-12 pl-12 px-4 text-gray-900 placeholder-gray-500 bg-gray-f7 border-2 border-transparent rounded outline-none transition duration-200 hover:border-gray-400 focus:border-black focus:placeholder-gray-900';
 
+// ---------------
+// Search Outline
+// ---------------
+export const SearchOutlineBase =
+  'flex items-center justify-center w-full lg:max-w-screen-md rounded relative overflow-hidden';
+
+export const SearchOutlineIconWrapper =
+  'absolute top-0 left-0 flex items-center justify-center h-full w-50px';
+
+export const SearchOutlineInput =
+  'w-full h-12 pl-12 px-4 text-gray-900 placeholder-gray-500 bg-gray-f7 border-2 border-gray-400 rounded outline-none transition duration-200 hover:border-gray-600 focus:border-gray-900 focus:placeholder-gray-900';
+
 // --------------
 // Section Title
 // --------------

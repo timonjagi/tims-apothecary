@@ -2,15 +2,19 @@ import React from 'react';
 import SearchIcon from 'assets/icons/search-icon';
 import { useSearch } from 'contexts/search/use-search';
 import {
-  SearchBase,
-  SearchIconWrapper,
-  SearchInput,
+  SearchOutlineBase,
+  SearchOutlineIconWrapper,
+  SearchOutlineInput,
 } from 'components/utils/theme';
 
-type SearchProps = { className?: string; id?: string; [key: string]: any };
+type SearchOutlineProps = {
+  className?: string;
+  id?: string;
+  [key: string]: any;
+};
 
-const Search = React.forwardRef<HTMLInputElement, SearchProps>(
-  ({ className = '', ...props }, ref) => {
+const SearchOutline = React.forwardRef<HTMLInputElement, SearchOutlineProps>(
+  ({ className, ...props }, ref) => {
     const { searchTerm, setSearchTerm } = useSearch();
     const onSearch = (e) => {
       e.preventDefault();
@@ -19,20 +23,21 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>(
     };
     const onSubmit = (e) => e.preventDefault();
 
-    const classNames = SearchBase + ' ' + className;
+    const classNames = SearchOutlineBase + ' ' + className;
+
     return (
       <form noValidate role="search" className={classNames} onSubmit={onSubmit}>
-        <span className={SearchIconWrapper}>
+        <span className={SearchOutlineIconWrapper}>
           <SearchIcon color="#5a5a5a" />
         </span>
-        <label htmlFor={props.id || 'search-normal'} className="sr-only">
-          {props.id || 'search-normal'}
+        <label htmlFor={props.id || 'search-outline'} className="sr-only">
+          {props.id || 'search-outline'}
         </label>
         <input
           type="search"
           placeholder="Search remedies and supplements"
-          className={SearchInput}
-          id={props.id || 'search-normal'}
+          className={SearchOutlineInput}
+          id={props.id || 'search-outline'}
           value={searchTerm}
           onChange={onSearch}
           autoComplete="off"
@@ -44,4 +49,4 @@ const Search = React.forwardRef<HTMLInputElement, SearchProps>(
   }
 );
 
-export default Search;
+export default SearchOutline;

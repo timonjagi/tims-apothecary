@@ -6,17 +6,20 @@ import 'assets/styles/rc-collapse.css';
 import 'assets/styles/index.css';
 import { CartProvider } from 'contexts/cart/cart.provider';
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
+import { StickyProvider } from 'contexts/sticky/sticky.provider';
 import { SearchProvider } from 'contexts/search/use-search';
 import 'typeface-open-sans';
 
 export default function CustomApp({ Component, pageProps }) {
   return (
     <SearchProvider>
-      <DrawerProvider>
-        <CartProvider>
-          <Component {...pageProps} />
-        </CartProvider>
-      </DrawerProvider>
+      <StickyProvider>
+        <DrawerProvider>
+          <CartProvider>
+            <Component {...pageProps} />
+          </CartProvider>
+        </DrawerProvider>
+      </StickyProvider>
     </SearchProvider>
   );
 }

@@ -5,7 +5,7 @@ import CTAImage from 'assets/image/CTA-image.png';
 
 export default function CallToAction() {
   return (
-    <CTABlock background={CTAImage}>
+    <CTABlock background={CTAImage.src}>
       <h3 className="font-normal text-white text-36px mb-6 text-center lg:text-left">
         Fast, Free Shipping,
         <br />
